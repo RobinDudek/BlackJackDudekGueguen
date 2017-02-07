@@ -8,6 +8,16 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBox x:Name="login_box" HorizontalAlignment="Left" Margin="198,174,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <TextBox x:Name="mail_box" HorizontalAlignment="Left" Margin="198,211,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="pwd_box" HorizontalAlignment="Left" Margin="198,248,0,0" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="pwd_check_box" HorizontalAlignment="Left" Margin="198,285,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="txt_login" HorizontalAlignment="Left" Margin="119,174,0,0" TextWrapping="Wrap" Text="user" VerticalAlignment="Top"/>
+        <TextBlock x:Name="txt_mail" HorizontalAlignment="Left" Margin="119,223,0,0" TextWrapping="Wrap" Text="email" VerticalAlignment="Top"/>
+        <TextBlock x:Name="txt_pwd" HorizontalAlignment="Left" Margin="119,264,0,0" TextWrapping="Wrap" Text="password" VerticalAlignment="Top"/>
+        <TextBlock x:Name="txt_check_pwd" HorizontalAlignment="Left" Margin="119,297,0,0" TextWrapping="Wrap" Text="check password" VerticalAlignment="Top"/>
+        <Button x:Name="cancel_btn" Content="Button" HorizontalAlignment="Left" Click="cancel_btn_Click" Margin="119,429,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="ins_btn" Content="Button" HorizontalAlignment="Left" Click="ins_btn_Click" Margin="204,429,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

@@ -33,7 +33,7 @@ namespace BlackJackDudekGueguen
 
         private void btn_insc_Click(object sender, RoutedEventArgs e)
         {
-            this.OnNavigatedTo("/View/Inscription.xaml");
+            //this.OnNavigatedTo(typeof("/View/Inscription.xaml"));
         }
     }
 }
