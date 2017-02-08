@@ -1,4 +1,5 @@
-﻿using BlackJackDudekGueguen.VewModel;
+﻿
+using BlackJackDudekGueguen.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -36,7 +37,7 @@ namespace BlackJackDudekGueguen
 
         private void btn_insc_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(View.SignUpViews));
         }
     }
 }

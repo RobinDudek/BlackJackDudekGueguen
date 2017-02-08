@@ -1,4 +1,5 @@
-﻿using BlackJackDudekGueguen.VewModel;
+﻿
+using BlackJackDudekGueguen.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -21,12 +22,17 @@ namespace BlackJackDudekGueguen.View
     /// <summary>
     /// Une page vide peut être utilisée seule ou constituer une page de destination au sein d'un frame.
     /// </summary>
-    public sealed partial class Inscription : Page
+    public sealed partial class SignUpViews : Page
     {
-        public Inscription()
+        public SignUpViews()
         {
-            this.InitializeComponent();
+            SignUpViews.InitializeComponent();
             this.DataContext = new SignUpVM();
+        }
+
+        private static void InitializeComponent()
+        {
+            throw new NotImplementedException();
         }
     }
 }

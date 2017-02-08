@@ -103,8 +103,8 @@
     <Compile Include="Models\SignUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewsModel\SignUpVM.cs" />
-    <Compile Include="Views\SignUp.xaml.cs">
-      <DependentUpon>SignUp.xaml</DependentUpon>
+    <Compile Include="View\SignUpViews.xaml.cs">
+      <DependentUpon>SignUpViews.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -133,7 +133,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\SignUp.xaml">
+    <Page Include="View\SignUpViews.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
