@@ -1,5 +1,6 @@
 ﻿
 using BlackJackDudekGueguen.ViewModels;
+using BlackJackDudekGueguen.View;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -27,17 +28,11 @@ namespace BlackJackDudekGueguen
         public MainPage()
         {
             this.InitializeComponent();
-            this.DataContext = new SignUpVM();
-        }
-
-        private void btn_co_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void btn_insc_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(View.SignUpViews),UriKind.Relative);
+            this.Frame.Navigate(typeof(SignUpView));
         }
     }
 }
