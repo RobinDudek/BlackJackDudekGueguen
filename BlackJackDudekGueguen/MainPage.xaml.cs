@@ -37,7 +37,7 @@ namespace BlackJackDudekGueguen
 
         private void btn_insc_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(View.SignUpViews));
+            Frame.Navigate(typeof(View.SignUpViews),UriKind.Relative);
         }
     }
 }
