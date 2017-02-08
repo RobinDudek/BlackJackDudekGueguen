@@ -26,7 +26,7 @@ namespace BlackJackDudekGueguen.View
         public Inscription()
         {
             this.InitializeComponent();
-            this.DataContext = new InscriptionVM();
+            this.DataContext = new SignUpVM();
         }
     }
 }

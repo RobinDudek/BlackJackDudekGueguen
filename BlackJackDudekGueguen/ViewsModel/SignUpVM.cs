@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BlackJackDudekGueguen.VewModel
 {
-    class InscriptionVM
+    class SignUpVM
     {
 
     }

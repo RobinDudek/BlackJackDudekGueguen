@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BlackJackDudekGueguen.Model
     {
-        public class Inscription
+        public class SignUp
         {
             private string firstName;
 
