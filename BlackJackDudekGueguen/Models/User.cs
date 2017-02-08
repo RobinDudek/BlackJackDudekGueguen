@@ -9,7 +9,7 @@ namespace BlackJackDudekGueguen.Models
 {
     class User
     {
-        [JsonProperty("id")]
+        [JsonProperty("user_id")]
         public int Id { get; set; }
         [JsonProperty("username")]
         public string Username { get; set; }
