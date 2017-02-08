@@ -98,11 +98,17 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Model\Card.cs" />
-    <Compile Include="Model\Hand.cs" />
+    <Compile Include="Models\Card.cs" />
+    <Compile Include="Models\Hand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\Inscription.xaml.cs">
+    <Compile Include="Views\GameView.xaml.cs">
+      <DependentUpon>GameView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Inscription.xaml.cs">
       <DependentUpon>Inscription.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TablesView.xaml.cs">
+      <DependentUpon>TablesView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -130,7 +136,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\Inscription.xaml">
+    <Page Include="Views\GameView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Inscription.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TablesView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
