@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BlackJackDudekGueguen.ViewModels
 {
-    class SignUpVM
+    public class SignUpViewModel
     {
 
     }
