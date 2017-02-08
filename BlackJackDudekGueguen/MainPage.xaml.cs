@@ -27,17 +27,11 @@ namespace BlackJackDudekGueguen
         public MainPage()
         {
             this.InitializeComponent();
-            this.DataContext = new SignUpVM();
-        }
-
-        private void btn_co_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void btn_insc_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(View.SignUpViews),UriKind.Relative);
+            Frame.Navigate(typeof(View.SignUpViews));
         }
     }
 }
