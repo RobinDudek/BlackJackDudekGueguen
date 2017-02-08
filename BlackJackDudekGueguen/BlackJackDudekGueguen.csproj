@@ -100,9 +100,11 @@
     </Compile>
     <Compile Include="Models\Card.cs" />
     <Compile Include="Models\Hand.cs" />
+    <Compile Include="Models\SignUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\Inscription.xaml.cs">
-      <DependentUpon>Inscription.xaml</DependentUpon>
+    <Compile Include="ViewsModel\SignUpVM.cs" />
+    <Compile Include="Views\SignUp.xaml.cs">
+      <DependentUpon>SignUp.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -112,6 +114,7 @@
     <None Include="BlackJackDudekGueguen_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\blackJack.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -130,7 +133,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\Inscription.xaml">
+    <Page Include="Views\SignUp.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

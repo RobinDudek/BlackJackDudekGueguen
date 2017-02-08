@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlackJackDudekGueguen.VewModel;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,7 +26,9 @@ namespace BlackJackDudekGueguen
         public MainPage()
         {
             this.InitializeComponent();
+            this.DataContext = new SignUpVM();
         }
+
         private void btn_co_Click(object sender, RoutedEventArgs e)
         {
 
@@ -33,7 +36,7 @@ namespace BlackJackDudekGueguen
 
         private void btn_insc_Click(object sender, RoutedEventArgs e)
         {
-            //this.OnNavigatedTo(typeof("/View/Inscription.xaml"));
+
         }
     }
 }
