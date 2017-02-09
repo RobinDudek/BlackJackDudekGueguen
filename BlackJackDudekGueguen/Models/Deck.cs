@@ -19,11 +19,17 @@ namespace BlackJackDudekGueguen.Models
 
         public void CreateDeck()
         {
-            for(int i = 0; i < 4; i++)
+
+            int cardPackages = 6;
+
+            for (int packageNumber = 0; packageNumber < cardPackages; packageNumber++)
             {
-                for(int j = 0; j < 13; j++)
+                for (int color = 0; color < 4; color++)
                 {
-                    Cards.Add(new Card(i, j));
+                    for (int number = 0; number < 13; number++)
+                    {
+                        Cards.Add(new Card(color, number));
+                    }
                 }
             }
         }
