@@ -10,8 +10,8 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Assets/blackJack.png" Stretch="UniformToFill"/>
         </Grid.Background>
-        <Button x:Name="button" Content="cancel" HorizontalAlignment="Left" Margin="91,427,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="button_Copy" Content="sign up" HorizontalAlignment="Left" Margin="215,427,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btn_cancel" Content="cancel" HorizontalAlignment="Left" Margin="91,427,0,0" Click="btn_cancel_Click" VerticalAlignment="Top"/>
+        <Button x:Name="btn_sign_up" Content="sign up" HorizontalAlignment="Left" Margin="215,427,0,0" Click="btn_sign_up_Click" VerticalAlignment="Top"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="215,197,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="91,209,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top"/>
         <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="91,241,0,0" TextWrapping="Wrap" Text="mail" VerticalAlignment="Top"/>

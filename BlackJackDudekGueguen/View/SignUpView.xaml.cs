@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlackJackDudekGueguen.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,17 @@ namespace BlackJackDudekGueguen.View
         public SignUpView()
         {
             this.InitializeComponent();
+            this.DataContext = SignUpViewModel;
+        }
+        private void btn_cancel_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
+
+        private void btn_sign_up_Click(object sender, RoutedEventArgs e)
+        {
+
+            this.Frame.Navigate(typeof(MainPage));
         }
     }
 }

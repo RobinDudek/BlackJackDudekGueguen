@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace BlackJackDudekGueguen.ViewModels
 {
-    public class SignUpViewModel
+    class SignUpViewModel
     {
-
+        
     }
 }
