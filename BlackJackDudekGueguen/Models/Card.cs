@@ -36,7 +36,7 @@ namespace BlackJackDudekGueguen.Models
              * j = 12, QUEEN
              * j = 13, KING
              **/
-
+            
             this.Color = color;
             this.Number = number;
             if(number==10 && number == 11 && number == 12 && number == 13)
