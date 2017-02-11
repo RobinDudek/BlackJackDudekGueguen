@@ -15,5 +15,6 @@
         <TextBlock x:Name="txt_log" HorizontalAlignment="Left" Margin="67,84,0,0" TextWrapping="Wrap" Text="user" VerticalAlignment="Top" Height="16"/>
         <TextBlock x:Name="txt_pwd" HorizontalAlignment="Left" Margin="67,139,0,0" TextWrapping="Wrap" Text="password" VerticalAlignment="Top" Height="17"/>
         <Button x:Name="SignUp" Content="SignUp" HorizontalAlignment="Left" Margin="184,300,0,0" VerticalAlignment="Top" Click="btn_insc_Click"/>
+        <Button x:Name="SignIn" Content="Sign In" HorizontalAlignment="Left" Margin="95,300,0,0" VerticalAlignment="Top" Click="btn_co_Click"/>
     </Grid>
 </Page>

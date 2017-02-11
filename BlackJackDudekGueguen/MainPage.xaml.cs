@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using BlackJackDudekGueguen.ViewModel;
 
 // Pour plus d'informations sur le modèle d'élément Page vierge, consultez la page http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -28,11 +29,17 @@ namespace BlackJackDudekGueguen
         public MainPage()
         {
             this.InitializeComponent();
+            this.DataContext = new SignInViewModel();
         }
 
         private void btn_insc_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(SignUpView));
+        }
+
+        private void btn_co_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

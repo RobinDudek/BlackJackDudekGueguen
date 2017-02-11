@@ -27,7 +27,7 @@ namespace BlackJackDudekGueguen.View
         {
             this.InitializeComponent();
             //utilise les données de la view pour faire l'inscription dans le VM
-            this.DataContext = new ViewModels.SignUpViewModel();
+            
         }
         private void btn_cancel_Click(object sender, RoutedEventArgs e)
         {
@@ -36,7 +36,7 @@ namespace BlackJackDudekGueguen.View
 
         private void btn_sign_up_Click(object sender, RoutedEventArgs e)
         {
-
+            this.DataContext = new ViewModels.SignUpViewModel();
             this.Frame.Navigate(typeof(MainPage));
         }
     }
