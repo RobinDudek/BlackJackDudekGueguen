@@ -5,22 +5,25 @@
     xmlns:local="using:BlackJackDudekGueguen.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:VM="using:BlackJackDudekGueguen.ViewModels"
     mc:Ignorable="d">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Assets/blackJack.png" Stretch="UniformToFill"/>
         </Grid.Background>
+        <TextBlock x:Name="log_txt" HorizontalAlignment="Left" Margin="91,209,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top"/>
+        <TextBlock x:Name="mail_txt" HorizontalAlignment="Left" Margin="91,241,0,0" TextWrapping="Wrap" Text="mail" VerticalAlignment="Top"/>
+        <TextBlock x:Name="fname_txt" HorizontalAlignment="Left" Margin="91,271,0,0" TextWrapping="Wrap" Text="firstname" VerticalAlignment="Top"/>
+        <TextBlock x:Name="lname_txt" HorizontalAlignment="Left" Margin="91,296,0,0" TextWrapping="Wrap" Text="lastname" VerticalAlignment="Top"/>
+        <TextBlock x:Name="pwd_txt" HorizontalAlignment="Left" Margin="91,321,0,0" TextWrapping="Wrap" Text="password" VerticalAlignment="Top" RenderTransformOrigin="0.418,1.617"/>
+        
         <Button x:Name="btn_cancel" Content="cancel" HorizontalAlignment="Left" Margin="91,427,0,0" Click="btn_cancel_Click" VerticalAlignment="Top"/>
         <Button x:Name="btn_sign_up" Content="sign up" HorizontalAlignment="Left" Margin="215,427,0,0" Click="btn_sign_up_Click" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="215,197,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="91,209,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="91,241,0,0" TextWrapping="Wrap" Text="mail" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="91,271,0,0" TextWrapping="Wrap" Text="firstname" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Margin="91,296,0,0" TextWrapping="Wrap" Text="lastname" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock1_Copy1" HorizontalAlignment="Left" Margin="91,321,0,0" TextWrapping="Wrap" Text="password" VerticalAlignment="Top" RenderTransformOrigin="0.418,1.617"/>
-        <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Margin="215,229,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox_Copy1" HorizontalAlignment="Left" Margin="215,259,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox_Copy2" HorizontalAlignment="Left" Margin="215,284,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="215,321,0,0" VerticalAlignment="Top"/>
+        
+        <TextBox x:Name="login_box" HorizontalAlignment="Left" Margin="215,197,0,0" TextWrapping="Wrap" Text="{Binding Userlogin}" VerticalAlignment="Top"/>
+        <TextBox x:Name="mail_box" HorizontalAlignment="Left" Margin="215,229,0,0" TextWrapping="Wrap" Text="{Binding Mail}" VerticalAlignment="Top"/>
+        <TextBox x:Name="fname_box" HorizontalAlignment="Left" Margin="215,259,0,0" TextWrapping="Wrap" Text="{Binding FirstName}" VerticalAlignment="Top"/>
+        <TextBox x:Name="lname_box" HorizontalAlignment="Left" Margin="215,284,0,0" TextWrapping="Wrap" Text="{Binding LastName}" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="pwd_box" HorizontalAlignment="Left" Margin="215,321,0,0" VerticalAlignment="Top" PasswordChar="{Binding UserPwd}"/>
     </Grid>
 </Page>

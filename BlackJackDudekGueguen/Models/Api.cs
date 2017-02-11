@@ -18,7 +18,7 @@ namespace BlackJackDudekGueguen.Models
                 getMethod(url);
             }
             else{
-                Console.WriteLine("On a chié dans la méthode, revérifie que t'a écris correctement GET avec les maj dans ton appel de l'API ");
+                //Console.WriteLine("On a chié dans la méthode, revérifie que t'a écris correctement GET avec les maj dans ton appel de l'API ");
             }
 
         }
@@ -30,7 +30,7 @@ namespace BlackJackDudekGueguen.Models
             }
             else
             {
-                Console.WriteLine("On a chié dans la méthode, revérifie que t'a écris correctement POST avec les maj dans ton appel de l'API ");
+                //Console.WriteLine("On a chié dans la méthode, revérifie que t'a écris correctement POST avec les maj dans ton appel de l'API ");
             }
         }
 
@@ -73,4 +73,4 @@ namespace BlackJackDudekGueguen.Models
 
 
 }
-}
+
