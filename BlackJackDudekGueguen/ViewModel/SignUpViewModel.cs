@@ -14,6 +14,7 @@ namespace BlackJackDudekGueguen.ViewModels
 {
     class SignUpViewModel
     {
+        
         public User User { get; set; }
         //affectation des valeurs au model SignUp
         public string Firstname

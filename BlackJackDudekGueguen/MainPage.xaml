@@ -10,8 +10,8 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Assets/blackJack.png" Stretch="UniformToFill"/>
         </Grid.Background>
-        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="184,114,0,0" VerticalAlignment="Top" Height="25"/>
-        <TextBox x:Name="loginBox" HorizontalAlignment="Left" Margin="177,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="26"/>
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="184,114,0,0" Password="{Binding User.Password}" VerticalAlignment="Top" Height="25"/>
+        <TextBox x:Name="loginBox" HorizontalAlignment="Left" Margin="177,84,0,0" TextWrapping="Wrap" Text="{Binding User.Email}" VerticalAlignment="Top" Height="26"/>
         <TextBlock x:Name="txt_log" HorizontalAlignment="Left" Margin="67,84,0,0" TextWrapping="Wrap" Text="user" VerticalAlignment="Top" Height="16"/>
         <TextBlock x:Name="txt_pwd" HorizontalAlignment="Left" Margin="67,139,0,0" TextWrapping="Wrap" Text="password" VerticalAlignment="Top" Height="17"/>
         <Button x:Name="SignUp" Content="SignUp" HorizontalAlignment="Left" Margin="184,300,0,0" VerticalAlignment="Top" Click="btn_insc_Click"/>

@@ -17,20 +17,18 @@ namespace BlackJackDudekGueguen.ViewModel
     {
         public User User { get; set; }
         //affectation des valeurs au model User
-        private string Useremail;
         public string UserEmail
         {
-            get { return Useremail; }
+            get { return UserEmail; }
             set
             {
                 this.UserEmail = value;
 
             }
         }
-        private string UserPwd;
         public string Userpwd
         {
-            get { return UserPwd; }
+            get { return Userpwd; }
             set
             {
                 this.Userpwd = value;
