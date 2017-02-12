@@ -86,7 +86,7 @@ namespace BlackJackDudekGueguen.ViewModels
                         SignUp.LastName = this.LastName;
                         //création d'un json pour signup
                         string json = JsonConvert.SerializeObject(SignUp);
-                        postMethod("http://demo.comte.re/api/auth/register", json);
+                        postMethod("/api/auth/register", json);
                     }
                     else
                     {
@@ -113,7 +113,7 @@ namespace BlackJackDudekGueguen.ViewModels
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://demo.comte.re/api/auth/register");
+                client.BaseAddress = new Uri("http://demo.comte.re");
                 /* On met le string du futur json
                  * jsonString -> le user lors de l'inscription, la table choisi 
                  */

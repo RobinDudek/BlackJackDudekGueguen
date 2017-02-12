@@ -9,13 +9,18 @@
     <Page.Resources>
         <DataTemplate x:Key="tableTemplate">
             <StackPanel>
-                <TextBlock Text="{Binding Table.FirstName}" />
-                <TextBlock Text="{Binding Table.LastName}" />
-                <TextBlock Text="{Binding Table.Age}" />
+                <TextBlock Text="Table n°" />
+                <TextBlock Text="{Binding Id}" />
+                <TextBlock Text="Places Restantes :" />
+                <TextBlock Text="{Binding Table.Max_Seat}"/>
+                <TextBlock Text="Place Occupées:" />
+                <TextBlock Text="{Binding Table.Seats_Available}" />
+                <TextBlock Text="Mise Minimum:" />
+                <TextBlock Text="{Binding Table.Min_Bet}" />
             </StackPanel>
         </DataTemplate>
     </Page.Resources>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListBox x:Name="listBox" ItemsSource="{Binding UpdateSourceTrigger=PropertyChanged, TableList}" ItemTemplate="{StaticResource tableTemplate}" HorizontalAlignment="Left" Width="140"></ListBox>
+        <ListBox x:Name="listBox" ItemsSource="{Binding UpdateSourceTrigger=PropertyChanged}" ItemTemplate="{StaticResource tableTemplate}" HorizontalAlignment="Left" Width="140"></ListBox>
     </Grid>
 </Page>
