@@ -19,7 +19,7 @@ namespace BlackJackDudekGueguen.ViewModel
         //affectation des valeurs au model User
         public string UserEmail
         {
-            get { return this.UserEmail; }
+            get { return UserEmail; }
             set
             {
                 this.UserEmail = value;
@@ -28,7 +28,7 @@ namespace BlackJackDudekGueguen.ViewModel
         }
         public string Userpwd
         {
-            get { return this.Userpwd; }
+            get { return Userpwd; }
             set
             {
                 this.Userpwd = value;
@@ -43,7 +43,7 @@ namespace BlackJackDudekGueguen.ViewModel
         public string HashMD5(string pwd) {
             String strAlgName = HashAlgorithmNames.Md5;;
             String strEncodedHash = this.SampleHashMsg(strAlgName, pwd);
-            return pwd;
+            return strEncodedHash;
         }
 
         public String SampleHashMsg(String strAlgName, String pwd)

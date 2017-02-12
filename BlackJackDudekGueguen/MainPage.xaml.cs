@@ -29,7 +29,7 @@ namespace BlackJackDudekGueguen
         public MainPage()
         {
             this.InitializeComponent();
-            this.DataContext = new SignInViewModel();
+            
         }
 
         private void btn_insc_Click(object sender, RoutedEventArgs e)
@@ -39,7 +39,7 @@ namespace BlackJackDudekGueguen
 
         private void btn_co_Click(object sender, RoutedEventArgs e)
         {
-
+            this.DataContext = new SignInViewModel();
         }
     }
 }
