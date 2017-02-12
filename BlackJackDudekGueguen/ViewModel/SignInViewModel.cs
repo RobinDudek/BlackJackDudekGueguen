@@ -78,23 +78,7 @@ namespace BlackJackDudekGueguen.ViewModel
             User.Password = this.Userpwd;
             User.Secret = HashMD5(User.Password);
             string json = JsonConvert.SerializeObject(User);
-            getMethod(json);
-        }
-        public async void getMethod(string url)
-        {
-
-            using (var client = new HttpClient())
-            {
-                client.BaseAddress = new Uri("http://demo.comte.re/");
-                client.DefaultRequestHeaders.Accept.Clear();
-                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-                HttpResponseMessage response = await client.GetAsync(url);
-                if (response.IsSuccessStatusCode)
-                {
-                    string res = await response.Content.ReadAsStringAsync();
-                }
-            }
+            Api.postMethod("/api/auth/login", json);
         }
     }
 }

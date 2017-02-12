@@ -27,8 +27,8 @@ namespace BlackJackDudekGueguen.View
         {
             this.InitializeComponent();
             //utilise les données de la view pour faire l'inscription dans le VM
-            
         }
+
         private void btn_cancel_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));

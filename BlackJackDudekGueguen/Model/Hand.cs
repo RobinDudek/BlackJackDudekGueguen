@@ -11,6 +11,7 @@ namespace BlackJackDudekGueguen.Model
     {
         public ObservableCollection<Card> Cards { get; set; }
         public int Bet { get; set; }
+        public int SideBet { get; set; }
         public int Score { get; set; }
 
         public Hand()

@@ -37,9 +37,11 @@ namespace BlackJackDudekGueguen.Model
             }
         }
 
-        public async void getMethod(string url)
-        {
+        //les 2 fonctions principales pour les requêtes API
 
+            //la méthode get
+        public static async void getMethod(string url)
+        {
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri("http://demo.comte.re/");
@@ -54,7 +56,8 @@ namespace BlackJackDudekGueguen.Model
             }
         }
 
-        public async void postMethod(string url, string jsonString)
+
+        public static async void postMethod(string url, string jsonString)
         {
             using (var client = new HttpClient())
             {
@@ -62,11 +65,12 @@ namespace BlackJackDudekGueguen.Model
                 /* On met le string du futur json
                  * jsonString -> le user lors de l'inscription, la table choisi 
                  */
-                var json = JsonConvert.SerializeObject(jsonString );
+                var json = JsonConvert.SerializeObject(jsonString);
                 var itemJson = new StringContent(json, Encoding.UTF8, "application/json");
                 HttpResponseMessage response = await client.PostAsync(url, itemJson);
                 if (response.IsSuccessStatusCode)
                 {
+                    string res = await response.Content.ReadAsStringAsync();
                 }
             }
         }
