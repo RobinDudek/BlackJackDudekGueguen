@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="BlackJackDudekGueguen.View.TableListView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BlackJackDudekGueguen.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <DataTemplate x:Key="tableTemplate">
+            <StackPanel>
+                <TextBlock Text="Table n°" />
+                <TextBlock Text="{Binding Id}" />
+                <TextBlock Text="Places Restantes :" />
+                <TextBlock Text="{Binding Table.Max_Seat}"/>
+                <TextBlock Text="Place Occupées:" />
+                <TextBlock Text="{Binding Table.Seats_Available}" />
+                <TextBlock Text="Mise Minimum:" />
+                <TextBlock Text="{Binding Table.Min_Bet}" />
+            </StackPanel>
+        </DataTemplate>
+    </Page.Resources>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ListBox x:Name="listBox" ItemsSource="{Binding UpdateSourceTrigger=PropertyChanged}" ItemTemplate="{StaticResource tableTemplate}" HorizontalAlignment="Left" Width="140"></ListBox>
+    </Grid>
+</Page>
