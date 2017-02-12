@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using System.Collections.ObjectModel;
 
 namespace BlackJackDudekGueguen.Model
 {
     class User
     {
+        public ObservableCollection<Hand> hands { get; set; }
 
         [JsonProperty("user_id")]
         public int Id { get; set; }
