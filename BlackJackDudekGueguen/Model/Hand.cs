@@ -9,6 +9,6 @@ namespace BlackJackDudekGueguen.Model
 {
     class Hand
     {
-        public ObservableCollection<Card> hand { get; set; }
+        public ObservableCollection<Card> Cards { get; set; }
     }
 }

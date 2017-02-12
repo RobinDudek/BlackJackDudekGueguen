@@ -10,7 +10,7 @@ namespace BlackJackDudekGueguen.Model
 {
     class User
     {
-        public ObservableCollection<Hand> hands { get; set; }
+        public Hand Hands { get; set; }
 
         [JsonProperty("user_id")]
         public int Id { get; set; }
@@ -36,6 +36,9 @@ namespace BlackJackDudekGueguen.Model
         [JsonProperty("password")]
         public string Password { get; set; }
 
+        [JsonProperty("secret")]
+        public string Secret { get; set; }
+
         [JsonProperty("stack")]
         public int Stack { get; set; }
 
@@ -44,5 +47,6 @@ namespace BlackJackDudekGueguen.Model
 
         [JsonProperty("last_refill")]
         public DateTime Last_Refill { get; set; }
+
     }
 }

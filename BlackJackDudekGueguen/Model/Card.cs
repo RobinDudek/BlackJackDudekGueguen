@@ -16,12 +16,14 @@ namespace BlackJackDudekGueguen.Model
         {
             /**
              * i ==> Color
+             * i = 0 -> cutCard
              * i = 1, SPADES (Pics)
              * i = 2, HEARTS (Coeurs)
              * i = 3, CLUBS (Trèfles)
              * i = 4, DIAMONDS (Carreaux)
              * 
              * j ==> Number
+             * j = 0 -> cutCard
              * j = 1, ACE
              * j = 2, TWO
              * j = 3, THREE

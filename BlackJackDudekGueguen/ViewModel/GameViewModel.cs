@@ -1,6 +1,7 @@
 ﻿using BlackJackDudekGueguen.Model;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -19,7 +20,9 @@ namespace BlackJackDudekGueguen.ViewModel
         {
             this.Deck = new Deck();
             this.Bank = new User();
+            this.Bank.Hands = new Hand();
             this.Player = new User();
+            this.
             drawCards();
             startGame();
         }
@@ -34,7 +37,8 @@ namespace BlackJackDudekGueguen.ViewModel
 
         public void draw(User user, bool isVisible)
         {
-            user.Hands
+            Card cardDrawed = this.Deck.Cards.Last();
+
         }
 
         public void startGame()
@@ -46,6 +50,8 @@ namespace BlackJackDudekGueguen.ViewModel
         {
 
         }
+
+
 
         //Se fait à la fin d'un tour
         public async void updateStack(Double earnings)
