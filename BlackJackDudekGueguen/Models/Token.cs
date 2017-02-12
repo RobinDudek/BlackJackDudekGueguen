@@ -10,7 +10,7 @@ namespace BlackJackDudekGueguen.Models
     class Token
     {
         [JsonProperty("token_type")]
-        public string token_type { get; set; }
+        public string Token_Type { get; set; }
         [JsonProperty("expires_in")]
         public int Expires_In { get; set; }
         [JsonProperty("access_token")]
