@@ -72,7 +72,7 @@ namespace BlackJackDudekGueguen.ViewModel
             User User = new User();
             User.Email = this.UserEmail;
             User.Password = this.Userpwd;
-            User.Password = HashMD5(User.Password);
+            User.secret = HashMD5(User.Password);
             string json = JsonConvert.SerializeObject(User);
             getMethod(json);
         }
