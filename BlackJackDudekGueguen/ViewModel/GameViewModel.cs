@@ -11,24 +11,44 @@ namespace BlackJackDudekGueguen.ViewModel
 {
     class GameViewModel
     {
+        public Deck Deck { get; set; }
         public User Bank { get; set; }
         public User Player { get; set; }
 
         public GameViewModel()
         {
+            this.Deck = new Deck();
             this.Bank = new User();
             this.Player = new User();
+            drawCards();
+            startGame();
         }
 
+        public void drawCards()
+        {
+            draw(Player, true);
+            draw(Bank, true);
+            draw(Player, true);
+            draw(Bank, false);
+        }
 
+        public void draw(User user, bool isVisible)
+        {
+            user.Hands
+        }
 
-        public void Split()
+        public void startGame()
+        {
+
+        }
+
+        public void split()
         {
 
         }
 
         //Se fait à la fin d'un tour
-        public async void UpdateStack(Double earnings)
+        public async void updateStack(Double earnings)
         {
             string apiUrl = "user/" + Player.Email + "/stack/" + earnings;
             using (var client = new HttpClient())

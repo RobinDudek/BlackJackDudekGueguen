@@ -94,14 +94,16 @@ namespace BlackJackDudekGueguen.ViewModels
                         PopAlert.Child = tb;
                         PopAlert.IsOpen = true;
                     }
-                }else
+                }
+                else
                 {
                     tb.Text = "login is empty";
                     PopAlert.Child = tb;
                     PopAlert.IsOpen = true;
                 }
 
-            }else
+            }
+            else
             {
                 tb.Text = "bad email";
                 PopAlert.Child = tb;
@@ -113,7 +115,7 @@ namespace BlackJackDudekGueguen.ViewModels
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://demo.comte.re");
+                client.BaseAddress = new Uri("http://demo.comte.re/");
                 /* On met le string du futur json
                  * jsonString -> le user lors de l'inscription, la table choisi 
                  */

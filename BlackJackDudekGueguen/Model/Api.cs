@@ -11,6 +11,9 @@ namespace BlackJackDudekGueguen.Model
 {
     class Api
     {
+        public User ConnectedUser { get; set; }
+        public Token UserToken { get; set; }
+
         public Api(string url, string method)
         {
             if(method == "GET")
