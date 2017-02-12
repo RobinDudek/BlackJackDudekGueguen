@@ -41,7 +41,7 @@ namespace BlackJackDudekGueguen.ViewModel
         //du coup on s'est permis de copié le code depuis internet
         //
         public string HashMD5(string pwd) {
-            String strAlgName = HashAlgorithmNames.Md5;
+            String strAlgName = HashAlgorithmNames.Md5;;
             String strEncodedHash = this.SampleHashMsg(strAlgName, pwd);
             return pwd;
         }
@@ -69,6 +69,7 @@ namespace BlackJackDudekGueguen.ViewModel
             String strHashBase64 = CryptographicBuffer.EncodeToBase64String(buffHash);
             return strHashBase64;
         }
+
         public SignInViewModel()
         {
             //nouvel utilisateur

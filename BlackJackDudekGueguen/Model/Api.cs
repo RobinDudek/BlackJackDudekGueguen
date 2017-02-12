@@ -67,7 +67,6 @@ namespace BlackJackDudekGueguen.Model
                 HttpResponseMessage response = await client.PostAsync(url, itemJson);
                 if (response.IsSuccessStatusCode)
                 {
-
                 }
             }
         }

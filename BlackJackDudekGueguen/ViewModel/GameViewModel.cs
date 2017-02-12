@@ -23,41 +23,69 @@ namespace BlackJackDudekGueguen.ViewModel
             this.Bank.Hand = new Hand();
             this.Player = new User();
             this.Player.Hand = new Hand();
-            drawCards();
-            startGame();
+            DrawCards();
+            StartGame();
         }
 
-        public void drawCards()
+        //On fait les tirages du début du tour
+        public void DrawCards()
         {
-            draw(Player.Hand, true);
-            draw(Bank.Hand, true);
-            draw(Player.Hand, true);
-            draw(Bank.Hand, false);
+            Draw(Player.Hand, true);
+            Draw(Bank.Hand, true);
+            Draw(Player.Hand, true);
+            Draw(Bank.Hand, false);
         }
 
-        public void draw(Hand UserHand, bool isVisible)
+        //Code pour distribuer une carte
+        public void Draw(Hand UserHand, bool isVisible)
         {
+            //La carte tirée est la dernière du paquet
             Card cardDrawed = this.Deck.Cards.Last();
+            //face ou visible ou cachée
             cardDrawed.IsVisible = isVisible;
+            //on l'ajoute à la main du joueur
             UserHand.Cards.Add(cardDrawed);
+            //on supprime la drnière carte du paquet (celle qui vient d'être tiré)
             int numberCard = Deck.Cards.Count;
             Deck.Cards.RemoveAt(numberCard);
         }
 
-        public void startGame()
+        //Pas eu le temps d'avancer plus le code, beaucoup de souci
+        public void StartGame()
+        {
+            //Display Bet View Model
+            //Do you want to play
+            //if yes
+                // 
+                if(Player.Hand.Cards[0].Number == Player.Hand.Cards[1].Number)
+                {
+                    //Display Split Button
+                }
+
+            //else
+                //stop Game
+
+        }
+
+        //si il click sur le bouton split
+        public void Split()
         {
 
         }
 
-        public void split()
+        //Si il clique sur le bouton assurance
+        public void Insurance()
         {
 
         }
 
+        public void Forgive()
+        {
 
+        }
 
         //Se fait à la fin d'un tour
-        public async void updateStack(Double moneyWin)
+        public async void UpdateStack(int moneyWin)
         {
             string apiUrl = "user/" + Player.Email + "/stack/" + moneyWin;
             using (var client = new HttpClient())
