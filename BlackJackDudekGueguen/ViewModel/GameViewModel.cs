@@ -1,5 +1,4 @@
 ﻿using BlackJackDudekGueguen.Model;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,38 +6,39 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
-using Windows.Security.Cryptography;
 
 namespace BlackJackDudekGueguen.ViewModel
 {
-    public class SignInViewModel
+    class GameViewModel
     {
-        public string HashMD5(string pwd) {
-            MD5 mHash = new MD5CryptoServiceProvider();
-            byte[] MD5B = mHash.ComputeHash(Encoding.UTF8.GetBytes(pwd));
-            string result = Convert.ToBase64String(MD5B);
-            return pwd;
+        public User Bank { get; set; }
+        public User Player { get; set; }
+
+        public GameViewModel()
+        {
+            this.Bank = new User();
+            this.Player = new User();
         }
 
-        public SignInViewModel()
-        {
-            User User = new User();
-            User.Username = this.Username;
-            User.Password = this.Password;
-            User.Password = HashMD5(User.Password);
-            string json = JsonConvert.SerializeObject(User);
-            getMethod(json);
-        }
-        public async void getMethod(string url)
+
+
+        public void Split()
         {
 
+        }
+
+        //Se fait à la fin d'un tour
+        public async void UpdateStack(Double earnings)
+        {
+            string apiUrl = "user/" + Player.Email + "/stack/" + earnings;
             using (var client = new HttpClient())
             {
+                //send the new stack to api in GET
                 client.BaseAddress = new Uri("http://demo.comte.re/");
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                HttpResponseMessage response = await client.GetAsync(url);
+                HttpResponseMessage response = await client.GetAsync(apiUrl);
                 if (response.IsSuccessStatusCode)
                 {
                     string res = await response.Content.ReadAsStringAsync();
@@ -46,4 +46,6 @@ namespace BlackJackDudekGueguen.ViewModel
             }
         }
     }
+
+
 }

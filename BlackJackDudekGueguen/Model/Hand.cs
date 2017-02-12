@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlackJackDudekGueguen.Models
+namespace BlackJackDudekGueguen.Model
 {
     class Hand
     {
