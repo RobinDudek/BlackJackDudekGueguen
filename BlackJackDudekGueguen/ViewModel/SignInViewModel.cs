@@ -17,18 +17,20 @@ namespace BlackJackDudekGueguen.ViewModel
     {
         public User User { get; set; }
         //affectation des valeurs au model User
+        private string Useremail;
         public string UserEmail
         {
-            get { return UserEmail; }
+            get { return Useremail; }
             set
             {
                 this.UserEmail = value;
 
             }
         }
+        private string UserPwd;
         public string Userpwd
         {
-            get { return Userpwd; }
+            get { return UserPwd; }
             set
             {
                 this.Userpwd = value;
@@ -78,7 +80,23 @@ namespace BlackJackDudekGueguen.ViewModel
             User.Password = this.Userpwd;
             User.Secret = HashMD5(User.Password);
             string json = JsonConvert.SerializeObject(User);
-            Api.postMethod("/api/auth/login", json);
+            postMethod("/api/auth/register", json);
+        }
+        public async void postMethod(string url, string jsonString)
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("http://demo.comte.re/");
+                /* On met le string du futur json
+                 * jsonString -> le user lors de l'inscription, la table choisi 
+                 */
+                var json = JsonConvert.SerializeObject(jsonString);
+                var itemJson = new StringContent(json, Encoding.UTF8, "application/json");
+                HttpResponseMessage response = await client.PostAsync(url, itemJson);
+                if (response.IsSuccessStatusCode)
+                {
+                }
+            }
         }
     }
 }
