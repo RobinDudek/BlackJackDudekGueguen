@@ -8,10 +8,10 @@ namespace BlackJackDudekGueguen.Model
 {
     class Card
     {
-        private int Color { get; set; }
-        private int Number { get; set; }
-        private int Value { get; set; }
-
+        public int Color { get; set; }
+        public int Number { get; set; }
+        public int Value { get; set; }
+        public bool IsVisible { get; set; }
         public Card(int color, int number)
         {
             /**

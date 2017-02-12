@@ -74,6 +74,11 @@ namespace BlackJackDudekGueguen.Model
                 }
 
             }
+            //On brule les 5 premières cartes
+            for(int burn = 0; burn < 5; burn++)
+            {
+
+            }
             //une fois que toute les cartes on été tirées, 
             //on remplace le premier deck par le deck mélangé
             this.Cards = randomizedDeck;

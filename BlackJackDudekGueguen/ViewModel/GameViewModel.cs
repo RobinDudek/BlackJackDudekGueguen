@@ -20,24 +20,26 @@ namespace BlackJackDudekGueguen.ViewModel
         {
             this.Deck = new Deck();
             this.Bank = new User();
-            this.Bank.Hands = new ObservableCollection<Hand>();
+            this.Bank.Hand = new Hand();
             this.Player = new User();
-            this.Player.Hands = new ObservableCollection<Hand>();
+            this.Player.Hand = new Hand();
             drawCards();
             startGame();
         }
 
         public void drawCards()
         {
-            draw(Player.Hands[0], true);
-            draw(Bank.Hands[0], true);
-            draw(Player.Hands[0], true);
-            draw(Bank.Hands[0], false);
+            draw(Player.Hand, true);
+            draw(Bank.Hand, true);
+            draw(Player.Hand, true);
+            draw(Bank.Hand, false);
         }
 
         public void draw(Hand UserHand, bool isVisible)
         {
-            //UserHand.Add(this.Deck.Cards.Last());
+            Card cardDrawed = this.Deck.Cards.Last();
+            cardDrawed.IsVisible = isVisible;
+            UserHand.Cards.Add(cardDrawed);
             int numberCard = Deck.Cards.Count;
             Deck.Cards.RemoveAt(numberCard);
         }
@@ -55,9 +57,9 @@ namespace BlackJackDudekGueguen.ViewModel
 
 
         //Se fait à la fin d'un tour
-        public async void updateStack(Double earnings)
+        public async void updateStack(Double moneyWin)
         {
-            string apiUrl = "user/" + Player.Email + "/stack/" + earnings;
+            string apiUrl = "user/" + Player.Email + "/stack/" + moneyWin;
             using (var client = new HttpClient())
             {
                 //send the new stack to api in GET
