@@ -90,6 +90,7 @@ namespace BlackJackDudekGueguen.ViewModels
                     }
                     else
                     {
+                        //affichage erreur mot de passe
                         tb.Text = "password is empty";
                         PopAlert.Child = tb;
                         PopAlert.IsOpen = true;
@@ -97,6 +98,7 @@ namespace BlackJackDudekGueguen.ViewModels
                 }
                 else
                 {
+                    //affichage erreur login
                     tb.Text = "login is empty";
                     PopAlert.Child = tb;
                     PopAlert.IsOpen = true;
@@ -105,6 +107,7 @@ namespace BlackJackDudekGueguen.ViewModels
             }
             else
             {
+                //affichage erreur email
                 tb.Text = "bad email";
                 PopAlert.Child = tb;
                 PopAlert.IsOpen = true;
