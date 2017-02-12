@@ -37,8 +37,11 @@ namespace BlackJackDudekGueguen.ViewModel
         }
 
         //https://msdn.microsoft.com/library/windows/apps/br241511
+        //le hashage en md5 est la seule chose qu'on a pas vu en cours, 
+        //du coup on s'est permis de copié le code depuis internet
+        //
         public string HashMD5(string pwd) {
-            String strAlgName = HashAlgorithmNames.Md5;;
+            String strAlgName = HashAlgorithmNames.Md5;
             String strEncodedHash = this.SampleHashMsg(strAlgName, pwd);
             return pwd;
         }
@@ -72,7 +75,7 @@ namespace BlackJackDudekGueguen.ViewModel
             User User = new User();
             User.Email = this.UserEmail;
             User.Password = this.Userpwd;
-            User.secret = HashMD5(User.Password);
+            User.Secret = HashMD5(User.Password);
             string json = JsonConvert.SerializeObject(User);
             getMethod(json);
         }

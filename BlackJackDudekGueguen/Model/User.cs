@@ -10,7 +10,8 @@ namespace BlackJackDudekGueguen.Model
 {
     class User
     {
-        public ObservableCollection<Hand> Hands { get; set; }
+        public Hand Hand { get; set; }
+        public Hand SplitHand { get; set;}
 
         [JsonProperty("user_id")]
         public int Id { get; set; }
