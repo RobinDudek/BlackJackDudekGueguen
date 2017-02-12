@@ -33,6 +33,7 @@ namespace BlackJackDudekGueguen.ViewModel
 
             }
         }
+
         //https://msdn.microsoft.com/library/windows/apps/br241511
         public string HashMD5(string pwd) {
             String strAlgName = HashAlgorithmNames.Sha512;;
@@ -42,6 +43,7 @@ namespace BlackJackDudekGueguen.ViewModel
 
         public String SampleHashMsg(String strAlgName, String pwd)
         {
+
             // conversion string en données binaires
             IBuffer buffUtf8Msg = CryptographicBuffer.ConvertStringToBinary(pwd, BinaryStringEncoding.Utf8);
 
