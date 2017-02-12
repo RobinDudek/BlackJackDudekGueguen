@@ -14,53 +14,53 @@ namespace BlackJackDudekGueguen.ViewModels
 {
     class SignUpViewModel
     {
-        public SignUp SignUp { get; set; }
+        public User User { get; set; }
         //affectation des valeurs au model SignUp
-        public string FirstName
+        public string Firstname
         {
-            get { return this.SignUp.FirstName; }
+            get { return this.User.Firstname; }
             set
             {
-                this.SignUp.FirstName = value;
+                this.User.Firstname = value;
 
             }
         }
-        public string LastName
+        public string Lastname
         {
-            get { return this.SignUp.LastName; }
+            get { return this.User.Lastname; }
             set
             {
-                this.SignUp.LastName = value;
+                this.User.Lastname = value;
 
             }
         }
-        public string Userlogin
+        public string Username
         {
-            get { return this.SignUp.Userlogin; }
+            get { return this.User.Username; }
             set
             {
-                this.SignUp.Userlogin = value;
+                this.User.Username = value;
 
             }
         }
-        public string Mail
+        public string Email
         {
-            get { return this.SignUp.Mail; }
+            get { return this.User.Email; }
             set
             {
                 if (value != ""){
-                    this.SignUp.Mail = value;
+                    this.User.Email = value;
                 } 
                 
 
             }
         }
-        public string UserPwd
+        public string Password
         {
-            get { return this.SignUp.UserPwd; }
+            get { return this.User.Password; }
             set
             {
-                this.SignUp.UserPwd = value;
+                this.User.Password = value;
 
             }
         }
@@ -70,22 +70,22 @@ namespace BlackJackDudekGueguen.ViewModels
             Popup PopAlert = new Popup();
             TextBlock tb = new TextBlock();
             //vérification des champs
-            if (this.Mail.Contains("@"))
+            if (this.Email.Contains("@"))
             {
-                if (this.Userlogin != "")
+                if (this.Username != "")
                 {
-                    if (this.UserPwd != "")
+                    if (this.Password != "")
                     {
                         PopAlert.IsOpen = false;
-                        this.SignUp = new SignUp();
+                        this.User = new User();
                         //création d'un nouveau sign up avec les données
-                        SignUp.Userlogin = this.Userlogin;
-                        SignUp.UserPwd = this.UserPwd;
-                        SignUp.Mail = this.Mail;
-                        SignUp.FirstName = this.FirstName;
-                        SignUp.LastName = this.LastName;
+                        User.Username = this.Username;
+                        User.Password = this.Password;
+                        User.Email = this.Email;
+                        User.Firstname = this.Firstname;
+                        User.Lastname = this.Lastname;
                         //création d'un json pour signup
-                        string json = JsonConvert.SerializeObject(SignUp);
+                        string json = JsonConvert.SerializeObject(User);
                         postMethod("/api/auth/register", json);
                     }
                     else
