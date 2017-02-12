@@ -37,7 +37,7 @@ namespace BlackJackDudekGueguen.ViewModel
 
         public void draw(Hand UserHand, bool isVisible)
         {
-            UserHand.Add(this.Deck.Cards.Last());
+            //UserHand.Add(this.Deck.Cards.Last());
             int numberCard = Deck.Cards.Count;
             Deck.Cards.RemoveAt(numberCard);
         }
