@@ -43,7 +43,7 @@ namespace BlackJackDudekGueguen.ViewModel
         public string HashMD5(string pwd) {
             String strAlgName = HashAlgorithmNames.Md5;
             String strEncodedHash = this.SampleHashMsg(strAlgName, pwd);
-            return pwd;
+            return strEncodedHash;
         }
 
         public String SampleHashMsg(String strAlgName, String pwd)
