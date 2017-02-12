@@ -13,8 +13,10 @@ using Windows.Storage.Streams;
 
 namespace BlackJackDudekGueguen.ViewModel
 {
-    public class SignInViewModel
+    class SignInViewModel
     {
+        public User User { get; set; }
+        //affectation des valeurs au model User
         public string UserEmail
         {
             get { return this.UserEmail; }
@@ -33,24 +35,26 @@ namespace BlackJackDudekGueguen.ViewModel
 
             }
         }
+
         //https://msdn.microsoft.com/library/windows/apps/br241511
         public string HashMD5(string pwd) {
-            String strAlgName = HashAlgorithmNames.Sha512;;
+            String strAlgName = HashAlgorithmNames.Md5;;
             String strEncodedHash = this.SampleHashMsg(strAlgName, pwd);
             return pwd;
         }
 
         public String SampleHashMsg(String strAlgName, String pwd)
         {
+
             // conversion string en données binaires
-            IBuffer buffUtf8Msg = CryptographicBuffer.ConvertStringToBinary(pwd, BinaryStringEncoding.Utf8);
+            IBuffer IBuff = CryptographicBuffer.ConvertStringToBinary(pwd, BinaryStringEncoding.Utf8);
 
             // nouvel objet d'hashage
             HashAlgorithmProvider objAlgProv = HashAlgorithmProvider.OpenAlgorithm(strAlgName);
             String strAlgNameUsed = objAlgProv.AlgorithmName;
 
             // hashage.
-            IBuffer buffHash = objAlgProv.HashData(buffUtf8Msg);
+            IBuffer buffHash = objAlgProv.HashData(IBuff);
 
             // vérification de la longueur du hashage.
             if (buffHash.Length != objAlgProv.HashLength)
@@ -64,6 +68,7 @@ namespace BlackJackDudekGueguen.ViewModel
         }
         public SignInViewModel()
         {
+            //nouvel utilisateur
             User User = new User();
             User.Email = this.UserEmail;
             User.Password = this.Userpwd;
