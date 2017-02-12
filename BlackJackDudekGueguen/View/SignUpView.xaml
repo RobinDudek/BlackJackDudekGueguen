@@ -20,10 +20,10 @@
         <Button x:Name="btn_cancel" Content="cancel" HorizontalAlignment="Left" Margin="91,427,0,0" Click="btn_cancel_Click" VerticalAlignment="Top"/>
         <Button x:Name="btn_sign_up" Content="sign up" HorizontalAlignment="Left" Margin="215,427,0,0" Click="btn_sign_up_Click" VerticalAlignment="Top"/>
         
-        <TextBox x:Name="login_box" HorizontalAlignment="Left" Margin="215,197,0,0" TextWrapping="Wrap" Text="{Binding Userlogin}" VerticalAlignment="Top"/>
-        <TextBox x:Name="mail_box" HorizontalAlignment="Left" Margin="215,229,0,0" TextWrapping="Wrap" Text="{Binding Mail}" VerticalAlignment="Top"/>
-        <TextBox x:Name="fname_box" HorizontalAlignment="Left" Margin="215,259,0,0" TextWrapping="Wrap" Text="{Binding FirstName}" VerticalAlignment="Top"/>
-        <TextBox x:Name="lname_box" HorizontalAlignment="Left" Margin="215,284,0,0" TextWrapping="Wrap" Text="{Binding LastName}" VerticalAlignment="Top"/>
-        <PasswordBox x:Name="pwd_box" HorizontalAlignment="Left" Margin="215,321,0,0" VerticalAlignment="Top" PasswordChar="{Binding UserPwd}"/>
+        <TextBox x:Name="login_box" HorizontalAlignment="Left" Margin="215,197,0,0" TextWrapping="Wrap" Text="{Binding User.Username}" VerticalAlignment="Top"/>
+        <TextBox x:Name="mail_box" HorizontalAlignment="Left" Margin="215,229,0,0" TextWrapping="Wrap" Text="{Binding User.Email}" VerticalAlignment="Top"/>
+        <TextBox x:Name="fname_box" HorizontalAlignment="Left" Margin="215,259,0,0" TextWrapping="Wrap" Text="{Binding User.FirstName}" VerticalAlignment="Top"/>
+        <TextBox x:Name="lname_box" HorizontalAlignment="Left" Margin="215,284,0,0" TextWrapping="Wrap" Text="{Binding User.LastName}" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="pwd_box" HorizontalAlignment="Left" Margin="215,321,0,0" VerticalAlignment="Top" PasswordChar="{Binding User.sPassword}"/>
     </Grid>
 </Page>
