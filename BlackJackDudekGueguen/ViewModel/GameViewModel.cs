@@ -20,25 +20,26 @@ namespace BlackJackDudekGueguen.ViewModel
         {
             this.Deck = new Deck();
             this.Bank = new User();
-            this.Bank.Hands = new Hand();
+            this.Bank.Hands = new ObservableCollection<Hand>();
             this.Player = new User();
-            this.
+            this.Player.Hands = new ObservableCollection<Hand>();
             drawCards();
             startGame();
         }
 
         public void drawCards()
         {
-            draw(Player, true);
-            draw(Bank, true);
-            draw(Player, true);
-            draw(Bank, false);
+            draw(Player.Hands[0], true);
+            draw(Bank.Hands[0], true);
+            draw(Player.Hands[0], true);
+            draw(Bank.Hands[0], false);
         }
 
-        public void draw(User user, bool isVisible)
+        public void draw(Hand UserHand, bool isVisible)
         {
-            Card cardDrawed = this.Deck.Cards.Last();
-
+            UserHand.Add(this.Deck.Cards.Last());
+            int numberCard = Deck.Cards.Count;
+            Deck.Cards.RemoveAt(numberCard);
         }
 
         public void startGame()
