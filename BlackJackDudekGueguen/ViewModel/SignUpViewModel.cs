@@ -113,7 +113,7 @@ namespace BlackJackDudekGueguen.ViewModels
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://demo.comte.re");
+                client.BaseAddress = new Uri("http://demo.comte.re/");
                 /* On met le string du futur json
                  * jsonString -> le user lors de l'inscription, la table choisi 
                  */

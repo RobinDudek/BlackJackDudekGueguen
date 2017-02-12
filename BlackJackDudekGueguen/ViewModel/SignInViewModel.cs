@@ -68,6 +68,7 @@ namespace BlackJackDudekGueguen.ViewModel
         }
         public SignInViewModel()
         {
+            //nouvel utilisateur
             User User = new User();
             User.Email = this.UserEmail;
             User.Password = this.Userpwd;
